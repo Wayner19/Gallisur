@@ -1,0 +1,21 @@
+<?php
+    require_once("conexion.php");
+
+    $conn = new Conexion();
+    $var = $_POST["datos"];
+
+
+    if($var != null){
+      $conn -> consulta("insert into ingreso_a_planta (fecha, tipo, origen, cantidad, muertas, camion) values('". $var[0]. "', '". $var[1]. "','". $var[2]. "',". $var[3]. ",". $var[4]. ",'". $var[5]. "')");
+    }
+
+    $resultado = $conn -> consulta("SELECT * FROM ingreso_a_planta");
+
+    $datos = array();
+
+    while($fila = $resultado -> fetch_array())
+      {
+        $datos[] = $fila;
+      }
+    echo json_encode($datos);
+?>
