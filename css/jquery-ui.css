@@ -1,3 +1,61 @@
+html{
+	background: #fff;
+}
+.titulo_menu{
+	font-size: 24px;
+	color: #151515;
+	padding: 15px;
+}
+.planilla{
+	position: absolute;
+	left: 370px;
+	padding: 20px;
+	height: 680px;
+	width: 75%;
+	background: #D8D8D8;
+}
+#tabs-7{
+	display: flex;
+	justify-content: flex-end;
+}
+#pagos{
+	visibility: collapse;
+}
+#vales{
+	visibility: collapse;
+}
+.opt{
+	display: flex;
+	padding: 15px;
+	font-size: 18px;
+	background: #D8D8D8;
+}
+.opt:hover{
+	cursor: pointer;
+	background: #ccc;
+	color: #76b852;
+	font-size: 24px;
+}
+.lateral{
+	position: absolute;
+	padding-top: 20px;
+	width: 350px;
+	height: 700px;;
+	background: #D8D8D8;
+	left: 10px;
+}
+.back_tap{
+	background: #76b852;
+}
+.espacio{
+	margin-left: 3%;
+}
+.user{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 20px;
+	margin-top: 3px;
+}
 #img_cargar{
 	position: absolute;
 	top: 70%;
@@ -67,10 +125,32 @@ margin-left: 50px;
 	justify-content: space-between;
 	padding-left: 1%;
 }
+.arriba_tab4{
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 1%;
+}
 .caja-texto{
 	border-radius: 5px;
 	border-color: #444;
 	height: 10%;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #444;
+}
+.caja_texto3{
+	border-radius: 5px;
+	border-color: #444;
+	height: 10%;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #444;
+}
+.caja_texto5{
+	border-radius: 5px;
+	border-color: #444;
+	height: 10%;
+	width: 95%;
 	font-weight: bold;
 	padding-left: 10px;
 	color: #444;
@@ -100,6 +180,12 @@ margin-left: 50px;
 	height: 20%;
 	width: 100%;
 }
+.boton-tab6{
+	background-color: #0972A5;
+	height: 20%;
+	width: 68%;
+	margin-top: 22%;
+}
 .boton-tab2{
 	background-color: #0972A5;
 	height: 15%;
@@ -111,6 +197,13 @@ margin-left: 50px;
 	height: 15%;
 	width:100%;
 	margin-top: 5%;
+}
+.boton-tab4{
+	background-color: #0972A5;
+	height: 20%;
+	width: 110%;
+	margin-top: 110%;
+	margin-left: 20px;
 }
 body{
 	font-family: "Trebuchet MS", sans-serif;

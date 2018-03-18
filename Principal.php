@@ -35,11 +35,12 @@ if (!empty($_SESSION['usuario'])){
     <li><a href="#tabs-7">Planilla</a></li>
 		<li><a href="#tabs-8">Reportes</a></li>
 		<li><a href="#tabs-9">Configuraci&oacute;n</a></li>
-		<a>Usuario:</a>
+		<div class="user"><h1><b><a>Usuario:</a>
 		<a id="sesion"><?php
-		echo $_SESSION['usuario'];?></a>
+		echo $_SESSION['usuario'];?></a></h1><b></div>
+
 	</ul>
-	<!------------------------------ingreso Planta ----------------------------->
+	<!---ingreso Planta ----------------------------->
 	<div id="tabs-1">
 		<div class="tab1-arriba">
 			<img src="images/logo2.png" alt="" id="logo1">
@@ -80,7 +81,7 @@ if (!empty($_SESSION['usuario'])){
 		<div id="div_tabla_1"></div>
 	</div>
 	</div>
-	<!------------------------------ingreso Cuarto ----------------------------->
+	<!---ingreso Cuarto ----------------------------->
 	<div id="tabs-2">
 			<div class="tab1-arriba">
 				<img src="images/logo2.png" alt="" id="logo3">
@@ -148,7 +149,7 @@ if (!empty($_SESSION['usuario'])){
 			 <div id="div_tabla_2"></div>
 		</div>
 	</div>
-	<!------------------------------ Despacho ----------------------------->
+	<!--- Despacho ----------------------------->
 	<div id="tabs-3">
 		<div class="arriba_tab3">
 				<div class="">
@@ -214,27 +215,178 @@ if (!empty($_SESSION['usuario'])){
 			<div id="div_tabla_4"></div>
 		</div>
 	</div>
-	<!------------------------------ Devoluciones----------------------------->
+	<!--- Devoluciones----------------------------->
 	<div id="tabs-4">
-		Devoluciones
+		<div class="arriba_tab4">
+			<div class="">
+			<h3>Fecha devolución</h3>
+			<div id="datepicker_tab4"></div>
+		</div>
+				<div class="espacio">
+						<h3>Tipo de ave y condición</h3>
+						<div id="controlgroup4">
+				<select id="car-type4">
+					<option selected="selected">Pollos</option>
+					<option>Gallinas</option>
+					<option>Gallos</option>
+				</select>
+				<label for="radio_entero4">Entero (a)</label>
+				<input type="radio" name="transmission4" id="radio_entero4" value="Entero">
+				<label for="radio_piezas4">Piezas</label>
+				<input type="radio" name="transmission4" id="radio_piezas4" value="Piezas">
+				<label for="radio_picado4">Picado (a)</label>
+				<input type="radio" name="transmission4" id="radio_picado4" value="Picado">
+			</div>
+				<div class="">
+					<h3>Tipo de pieza</h3>
+					<select id="selectmenu_tab4">
+					 <option selected="selected">Muslos</option>
+					 <option>Alas</option>
+					 <option>Pechugas</option>
+					 <option>Patas</option>
+					 <option>Pescuezo</option>
+					 <option>Ante muslo</option>
+					</select>
+				</div>
+			<h3>Cantidad</h3>
+			<input type="text" id="txt_cantidad_tab4" name="" value="" class="caja_texto3">
+		</div>
+		<div class="espacio">
+			<h3>Peso</h3>
+			<input type="text" id="txt_peso_tab4" name="" value="" class="caja_texto3">
+			<h3>Vendedor</h3>
+			<input type="text" id="txt_vendedor_tab4" name="" value="" class="caja_texto3">
+			<h3>Lote</h3>
+			<input type="text" id="txt_lote_tab4" name="" value="" class="caja_texto3">
+			</div>
+			<div class="espacio">
+			<button id='btn_agregar_devolucion' class='boton-tab4'>Registrar devolución</button>
+			</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_5"></div>
+			</div>
 	</div>
-	<!------------------------------ Pedidos ----------------------------->
+	<!--- Pedidos ----------------------------->
 	<div id="tabs-5">
-		Pedidos
+		<div class="arriba_tab4">
+				<div class="">
+					<h3>Fecha pedido</h3>
+					<div id="datepicker_tab5"></div>
+				</div>
+				<div class="espacio">
+					<h3>Cliente: </h3>
+					<input type="text" id="txt_cliente_tab5" name="" value="" class="caja_texto5">
+					<h3>Tipo de ave y condición</h3>
+					<div id="controlgroup5">
+			<select id="car-type5">
+				<option selected="selected">Pollos</option>
+				<option>Gallinas</option>
+				<option>Gallos</option>
+			</select>
+			<label for="radio_entero5">Entero (a)</label>
+			<input type="radio" name="transmission5" id="radio_entero5" value="Entero">
+			<label for="radio_piezas5">Piezas</label>
+			<input type="radio" name="transmission5" id="radio_piezas5" value="Piezas">
+			<label for="radio_picado5">Picado (a)</label>
+			<input type="radio" name="transmission5" id="radio_picado5" value="Picado">
+		</div>
+		<div class="no_enteras">
+			<div class="">
+				<h3>Tipo de pieza</h3>
+				<select id="selectmenu_tab5">
+				 <option selected="selected">Muslos</option>
+				 <option>Alas</option>
+				 <option>Pechugas</option>
+				 <option>Patas</option>
+				 <option>Pescuezo</option>
+				 <option>Ante muslo</option>
+				</select>
+			</div>
+
+		</div>
+				</div>
+				<div class="espacio">
+					<h3>Cantidad</h3>
+					<input type="text" id="txt_cantidad_tab5" name="" value="" class="caja-texto">
+					<h3>Peso (Kg)</h3>
+					<input type="text" id="txt_peso_tab5" name="" value="" class="caja-texto">
+					<button id='btn_agregar_lista_pedido' onclick="arrya()"class='boton-tab2'><img src='images/flecha_derecha.png'/></button>
+				</div>
+				<div class="">
+					<div style="width:350px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+						<div id="div_tabla_6"></div>
+					</div>
+					<button id='btn_agregar_pedido' class='boton-tab3'>Agregar pedido</button>
+				</div>
+		</div>
+		<div class="abajo_tab3">
+			<div id="div_tabla_7"></div>
+		</div>
 	</div>
-	<!------------------------------ Decomisos ----------------------------->
+	<!--- Decomisos ----------------------------->
 	<div id="tabs-6">
-		Decomisos
+		<div class="arriba_tab4">
+		<div class="">
+			<h3>Fecha Decomiso</h3>
+			<div id="datepicker_tab6"></div>
+		</div>
+		<div class="espacio">
+		<h3>Encargado</h3>
+		<input type="text" id="txt_encargado_tab6" name="" value="" class="caja-texto">
+		<h3>Lugar</h3>
+		<input type="text" id="txt_lugar_tab6" name="" value="" class="caja-texto">
 	</div>
-	<!------------------------------ Planilla ----------------------------->
+	<div class="espacio">
+			<h3>Pollos (peso)</h3>
+			<input type="text" id="txt_cantidad_1_tab8" name="" value="" class="caja-texto espacio">
+			<h3>Gallinas (cantidad)</h3>
+			<input type="text" id="txt_cantidad_2_tab8" name="" value="" class="caja-texto espacio">
+			<h3>Gallos (cantidad)</h3>
+			<input type="text" id="txt_cantidad_3_tab8" name="" value="" class="caja-texto espacio">
+	</div>
+	<div class="espacio">
+	<h3>Estado del producto:</h3>
+	<div id="controlgroup1_8">
+	<label for="transmission-standard">Vencido</label>
+	<input type="radio" name="transmission" id="transmission-standard">
+	<label for="transmission-automatic">Mal estado</label>
+	<input type="radio" name="transmission" id="transmission-automatic">
+	<label for="transmission-standard1">Baja calidad</label>
+	<input type="radio" name="transmission" id="transmission-standard1">
+</div>
+<button id='btn_agregar_decomiso' class='boton-tab6'>Registrar decomiso</button>
+		</div>
+		</div>
+		<div class="abajo_tab3">
+			<div id="div_tabla_8"></div>
+		</div>
+		</div>
+	<!--- Planilla ----------------------------->
 	<div id="tabs-7">
-		Planilla
+		<div class="lateral">
+			<div class="titulo_menu">
+				<b>MENÚ</b>
+			</div>
+			<div onclick="planilla(1)" class="opt"><B>Registro funcionario</B></div>
+			<div onclick="planilla(2)" class="opt"><B>Registro pagos</B></div>
+			<div onclick="planilla(3)" class="opt"><B>Registro vales</B></div>
+		</div>
+		<div id="funcionarios" class="planilla">
+Registro funcionario
+		</div>
+		<div id="pagos" class="planilla">
+Registro pagos
+		</div>
+		<div id="vales" class="planilla">
+Registro vales
+		</div>
 	</div>
-	<!------------------------------ Reportes ----------------------------->
+	<!--- Reportes ----------------------------->
 	<div id="tabs-8">
 		Reportes
 	</div>
-	<!------------------------------ Configuracion ----------------------------->
+	<!--- Configuracion ----------------------------->
 	<div id="tabs-9">
 
 		<li><a href="#" style="color:#040404;" onclick="mostrar()"><B>Agregar Usuario</B></a></li>
@@ -283,7 +435,7 @@ if (!empty($_SESSION['usuario'])){
 
 
 </div>
-<!------------------------------ Mensaje ----------------------------->
+<!--- Mensaje ----------------------------->
 <div id="mensaje" class="men">
 	<div class="ui-widget">
 	<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
@@ -314,8 +466,11 @@ if (!empty($_SESSION['usuario'])){
 <script type="text/javascript" src="js/funciones.js"></script>
 <script type="text/javascript" src="js/IngresoCuarto.js"></script>
 <script type="text/javascript" src="js/despachar.js"></script>
+<script type="text/javascript" src="js/devoluciones.js"></script>
+<script type="text/javascript" src="js/pedidos.js"></script>
+<script type="text/javascript" src="js/decomisos.js"></script>
+<script type="text/javascript" src="js/planilla.js"></script>
 <script type="text/javascript" src="js/Usuarios.js"></script>
-
 </body>
 </html>
 <?php

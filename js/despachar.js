@@ -57,10 +57,10 @@ if(array==null){
 
  j$123('#div_tabla_3').html(datos);
  j$123( "#btn_eliminar_despacho2" ).button();
- $("#div_tabla_3").tablesorter({widthFixed: true, widgets: ['zebra']});
+ $("#tabla_3").tablesorter({widthFixed: true, widgets: ['zebra']});
  j$123( "#btn_eliminar_despacho2" ).click(function(){
    id = [];
-   j$123("#div_tabla_3 input[type=checkbox]:checked").each(function(){
+   j$123("#tabla_3 input[type=checkbox]:checked").each(function(){
        id.push(j$123(this).val());
    });
    if(id.length > 0){
@@ -80,7 +80,7 @@ if(array==null){
 }
 
 function EliminarD(parametro){
-  
+
   for (x=0;x < parametro.length;x++) {
     var ind=parametro[x];
     array.splice(ind, 1);

@@ -37,6 +37,11 @@ j$123( "#button-icon" ).button({
 j$123( "#radioset" ).buttonset();
 j$123( "#controlgroup" ).controlgroup();
 j$123( "#controlgroup2" ).controlgroup();
+j$123( "#controlgroup4" ).controlgroup();
+j$123( "#controlgroup5" ).controlgroup();
+j$123( "#controlgroup1_8" ).controlgroup();
+j$123( "#controlgroup2_8" ).controlgroup();
+j$123( "#controlgroup3_8" ).controlgroup();
 j$123( "#tabs" ).tabs();
 
 function accion_dialogo(opt, parametro){
@@ -175,6 +180,15 @@ j$123( "#datepicker_tab2" ).datepicker({
 j$123( "#datepicker_tab3" ).datepicker({
 	inline: true
 });
+j$123( "#datepicker_tab4" ).datepicker({
+	inline: true
+});
+j$123( "#datepicker_tab5" ).datepicker({
+	inline: true
+});
+j$123( "#datepicker_tab6" ).datepicker({
+	inline: true
+});
 j$123( "#datepicker4" ).datepicker();
 j$123( "#slider" ).slider({
 	range: true,
@@ -192,6 +206,8 @@ j$123( "#EUsu" ).selectmenu();
 j$123( "#Privilegios" ).selectmenu();
 j$123( "#selectmenu_tab2" ).selectmenu();
 j$123( "#selectmenu_tab3" ).selectmenu();
+j$123( "#selectmenu_tab4" ).selectmenu();
+j$123( "#selectmenu_tab5" ).selectmenu();
 j$123( "#dialog-link, #icons li" ).hover(
 	function() {
 		j$123( this ).addClass( "ui-state-hover" );
@@ -223,3 +239,11 @@ j$123( "#dialog-link, #icons li" ).hover(
 	j$123( "#agregarusuario" ).button();
 	j$123( "#cambiarcontra" ).button();
 	j$123( "#eliminar" ).button();
+	j$123( "#btn_eliminar_pedido" ).button();
+	j$123( "#btn_agregar_devolucion" ).button();
+	j$123( "#btn_eliminar_devolucion" ).button();
+	j$123( "#btn_agregar_lista_pedido" ).button();
+	j$123( "#btn_agregar_pedido" ).button();
+	j$123( "#btn_agregar_pedido2" ).button();
+	j$123( "#btn_eliminar_decomisos" ).button();
+	j$123( "#btn_agregar_decomiso" ).button();
