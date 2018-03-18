@@ -18,10 +18,7 @@ html{
 	display: flex;
 	justify-content: flex-end;
 }
-#pagos{
-	visibility: collapse;
-}
-#vales{
+.visible{
 	visibility: collapse;
 }
 .opt{

@@ -375,16 +375,48 @@ if (!empty($_SESSION['usuario'])){
 		<div id="funcionarios" class="planilla">
 Registro funcionario
 		</div>
-		<div id="pagos" class="planilla">
+		<div id="pagos" class="planilla visible">
 Registro pagos
 		</div>
-		<div id="vales" class="planilla">
+		<div id="vales" class="planilla visible">
 Registro vales
 		</div>
 	</div>
 	<!--- Reportes ----------------------------->
 	<div id="tabs-8">
-		Reportes
+		<div class="lateral">
+			<div class="titulo_menu">
+				<b>REPORTES</b>
+			</div>
+			<div onclick="reporte(1)" class="opt"><B>Ingresos a planta</B></div>
+			<div onclick="reporte(2)" class="opt"><B>Ingresos a cuarto frío</B></div>
+			<div onclick="reporte(3)" class="opt"><B>Reporte despachos</B></div>
+			<div onclick="reporte(4)" class="opt"><B>Reporte devoluciones</B></div>
+			<div onclick="reporte(5)" class="opt"><B>Reporte pedidos</B></div>
+			<div onclick="reporte(6)" class="opt"><B>Reporte decomisos</B></div>
+			<div onclick="reporte(7)" class="opt"><B>Reporte planilla</B></div>
+		</div>
+		<div id="ingresos" class="planilla">
+			Ingresos a planta
+		</div>
+		<div id="cuarto" class="planilla visible">
+			Ingresos a cuarto frío
+		</div>
+		<div id="despacho" class="planilla visible">
+			Reporte despachos
+		</div>
+		<div id="devoluciones" class="planilla visible">
+			Reporte devoluciones
+		</div>
+		<div id="pedidos" class="planilla visible">
+			Reporte pedidos
+		</div>
+		<div id="decomisos" class="planilla visible">
+			Reporte decomisos
+		</div>
+		<div id="personal" class="planilla visible">
+			Reporte planilla
+		</div>
 	</div>
 	<!--- Configuracion ----------------------------->
 	<div id="tabs-9">
@@ -470,6 +502,7 @@ Registro vales
 <script type="text/javascript" src="js/pedidos.js"></script>
 <script type="text/javascript" src="js/decomisos.js"></script>
 <script type="text/javascript" src="js/planilla.js"></script>
+<script type="text/javascript" src="js/reportes.js"></script>
 <script type="text/javascript" src="js/Usuarios.js"></script>
 </body>
 </html>
