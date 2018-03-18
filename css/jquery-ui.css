@@ -1,6 +1,27 @@
 html{
 	background: #fff;
 }
+.config{
+	margin-left: 25px;
+	margin-right: 25px;
+}
+.titulo_ventana{
+	background: #ccc;
+	color: #76b852;
+	font-size: 24px;
+	left: 350px;
+	width: 77%;
+	position: relative;
+	padding: 15px;
+}
+.titulo_ventana2{
+	background: #ccc;
+	color: #76b852;
+	font-size: 24px;
+	width: 97.5%;
+	position: relative;
+	padding: 15px;
+}
 .titulo_menu{
 	font-size: 24px;
 	color: #151515;
@@ -9,9 +30,15 @@ html{
 .planilla{
 	position: absolute;
 	left: 370px;
-	padding: 20px;
 	height: 680px;
-	width: 75%;
+	width: 77%;
+	background: #D8D8D8;
+}
+.planilla2{
+	position: absolute;
+	left: 370px;
+	height: 740px;
+	width: 77%;
 	background: #D8D8D8;
 }
 #tabs-7{
@@ -37,7 +64,7 @@ html{
 	position: absolute;
 	padding-top: 20px;
 	width: 350px;
-	height: 700px;;
+	height: 720px;;
 	background: #D8D8D8;
 	left: 10px;
 }

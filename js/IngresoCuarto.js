@@ -208,17 +208,16 @@ function cargar_tabla_cuarto_frio(parametro){
           id.push(j$123(this).val());
       });
       if(id.length > 0){
-        accion_dialogo2(1, id);
+        accion_dialogo(2, id, "Eliminar ingresos a cuarto frío!");
+        j$123( "#dialog" ).dialog( "open" );
         if(id.length >= 2){
-          j$123( "#dialog2" ).dialog( "open" );
-          j$123( "#mensaje12" ).html("Se eliminarán " + id.length + " registros!");
+          j$123( "#mensaje1" ).html("Se eliminarán " + id.length + " registros!");
         }else {
-          j$123( "#dialog2" ).dialog( "open" );
-          j$123( "#mensaje12" ).html("Se eliminará " + id.length + " registro!");
+          j$123( "#mensaje1" ).html("Se eliminará " + id.length + " registro!");
         }
       }else{
-        j$123( "#dialog_single_button2" ).dialog( "open" );
-        j$123( "#mensaje22" ).html('Debe de seleccionar al menos una fila!');
+        j$123( "#dialog_single_button" ).dialog( "open" );
+        j$123( "#mensaje2" ).html('Debe de seleccionar al menos una fila!');
       }
     });
     if(parametro != null){

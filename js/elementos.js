@@ -44,83 +44,34 @@ j$123( "#controlgroup2_8" ).controlgroup();
 j$123( "#controlgroup3_8" ).controlgroup();
 j$123( "#tabs" ).tabs();
 
-function accion_dialogo(opt, parametro){
-
+function accion_dialogo(opt, parametro, titulo){
 	j$123( "#dialog" ).dialog({
 		autoOpen: false,
 		width: 400,
+		title: titulo,
 		buttons: [
 			{
 				text: "Ok",
 				click: function() {
 					switch (opt) {
 						case 1:
-
 							eliminar_ingreso(parametro);
 							break;
 						case 2:
-
+              eliminar_ingreso_Cuarto(parametro);
 						 break;
-					}
-					j$123( this ).dialog( "close" );
-				}
-			},
-			{
-				text: "Cancel",
-				click: function() {
-					j$123( this ).dialog( "close" );
-				}
-			}
-		]
-	});
-}
-function accion_dialogo2(opt, parametro){
-
-j$123( "#dialog2" ).dialog({
-		autoOpen: false,
-		width: 400,
-		buttons: [
-			{
-				text: "Ok",
-				click: function() {
-					switch (opt) {
-						case 1:
-
-							eliminar_ingreso_Cuarto(parametro);
+						 case 3:
+	  			 		EliminarD(parametro);
 							break;
-						case 2:
-
-						 break;
-					}
-					j$123( this ).dialog( "close" );
-				}
-			},
-			{
-				text: "Cancel",
-				click: function() {
-					j$123( this ).dialog( "close" );
-				}
-			}
-		]
-	});
-}
-function accion_dialogo3(opt, parametro){
-
-	j$123( "#dialog3" ).dialog({
-		autoOpen: false,
-		width: 400,
-		buttons: [
-			{
-				text: "Ok",
-				click: function() {
-					switch (opt) {
-						case 1:
-
-							EliminarD(parametro);
-							break;
-						case 2:
-
-						 break;
+							case 4:
+							//eliminar_despacho(parametro);
+							 break;
+							 case 5:
+							 //eliminar_devolucion(parametro);
+ 							 break;
+							 case 6:
+							 	cerrar_sesion();
+ 							 break;
 					}
 					j$123( this ).dialog( "close" );
 				}
@@ -135,30 +86,6 @@ function accion_dialogo3(opt, parametro){
 	});
 }
 j$123( "#dialog_single_button" ).dialog({
-	autoOpen: false,
-	width: 400,
-	buttons: [
-		{
-			text: "Ok",
-			click: function() {
-				j$123( this ).dialog( "close" );
-			}
-		}
-	]
-});
-j$123( "#dialog_single_button2" ).dialog({
-	autoOpen: false,
-	width: 400,
-	buttons: [
-		{
-			text: "Ok",
-			click: function() {
-				j$123( this ).dialog( "close" );
-			}
-		}
-	]
-});
-j$123( "#dialog_single_button3" ).dialog({
 	autoOpen: false,
 	width: 400,
 	buttons: [

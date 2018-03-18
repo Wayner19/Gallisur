@@ -63,18 +63,18 @@ if(array==null){
    j$123("#tabla_3 input[type=checkbox]:checked").each(function(){
        id.push(j$123(this).val());
    });
+
    if(id.length > 0){
-     accion_dialogo3(1, id);
+     accion_dialogo(3, id, "Eliminar producto!");
+     j$123( "#dialog" ).dialog( "open" );
      if(id.length >= 2){
-       j$123( "#dialog3" ).dialog( "open" );
-       j$123( "#mensaje123" ).html("Se eliminarán " + id.length + " registros!");
+       j$123( "#mensaje1" ).html("Se eliminarán " + id.length + " registros!");
      }else {
-       j$123( "#dialog3" ).dialog( "open" );
-       j$123( "#mensaje123" ).html("Se eliminará " + id.length + " registro!");
+       j$123( "#mensaje1" ).html("Se eliminará " + id.length + " registro!");
      }
    }else{
-     j$123( "#dialog_single_button3" ).dialog( "open" );
-     j$123( "#mensaje223" ).html('Debe de seleccionar al menos una fila!');
+     j$123( "#dialog_single_button" ).dialog( "open" );
+     j$123( "#mensaje2" ).html('Debe de seleccionar al menos una fila!');
    }
  });
 }
@@ -287,12 +287,11 @@ function cargar_tabla_despacho(parametro, parametro2){
           id.push(j$123(this).val());
       });
       if(id.length > 0){
-        accion_dialogo(2, id);
+        accion_dialogo(4, id, 'Eliminar despacho!');
+        j$123( "#dialog" ).dialog( "open" );
         if(id.length >= 2){
-          j$123( "#dialog" ).dialog( "open" );
           j$123( "#mensaje1" ).html("Se eliminarán " + id.length + " registros!");
         }else {
-          j$123( "#dialog" ).dialog( "open" );
           j$123( "#mensaje1" ).html("Se eliminará " + id.length + " registro!");
         }
       }else{

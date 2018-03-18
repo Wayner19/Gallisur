@@ -12,7 +12,6 @@ if (!empty($_SESSION['usuario'])){
 	<link rel="stylesheet" href="css/jq.css" type="text/css" media="print, projection, screen" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="print, projection, screen" />
 	<script src="js/jquery-1.12.4.js"></script>
-	<script src="js/external/jquery/jquery.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script type="text/javascript">
 		var j$123 = $.noConflict(true);
@@ -366,20 +365,26 @@ if (!empty($_SESSION['usuario'])){
 	<div id="tabs-7">
 		<div class="lateral">
 			<div class="titulo_menu">
-				<b>MENÚ</b>
+				<b>PLANILLA</b>
 			</div>
 			<div onclick="planilla(1)" class="opt"><B>Registro funcionario</B></div>
 			<div onclick="planilla(2)" class="opt"><B>Registro pagos</B></div>
 			<div onclick="planilla(3)" class="opt"><B>Registro vales</B></div>
 		</div>
-		<div id="funcionarios" class="planilla">
-Registro funcionario
+		<div id="funcionarios" class="planilla2">
+			<div class="titulo_ventana2">
+				Registro funcionario
+			</div>
 		</div>
-		<div id="pagos" class="planilla visible">
-Registro pagos
+		<div id="pagos" class="planilla2 visible">
+			<div class="titulo_ventana2">
+				Registro pagos
+			</div>
 		</div>
-		<div id="vales" class="planilla visible">
-Registro vales
+		<div id="vales" class="planilla2 visible">
+			<div class="titulo_ventana2">
+				Registro vales
+			</div>
 		</div>
 	</div>
 	<!--- Reportes ----------------------------->
@@ -396,36 +401,48 @@ Registro vales
 			<div onclick="reporte(6)" class="opt"><B>Reporte decomisos</B></div>
 			<div onclick="reporte(7)" class="opt"><B>Reporte planilla</B></div>
 		</div>
-		<div id="ingresos" class="planilla">
+		<div class="titulo_ventana">
 			Ingresos a planta
 		</div>
+		<div id="ingresos" class="planilla">
+
+		</div>
 		<div id="cuarto" class="planilla visible">
-			Ingresos a cuarto frío
+
 		</div>
 		<div id="despacho" class="planilla visible">
-			Reporte despachos
+
 		</div>
 		<div id="devoluciones" class="planilla visible">
-			Reporte devoluciones
+
 		</div>
 		<div id="pedidos" class="planilla visible">
-			Reporte pedidos
+
 		</div>
 		<div id="decomisos" class="planilla visible">
-			Reporte decomisos
+
 		</div>
 		<div id="personal" class="planilla visible">
-			Reporte planilla
+
 		</div>
 	</div>
 	<!--- Configuracion ----------------------------->
 	<div id="tabs-9">
+		<div class="lateral">
+			<div class="titulo_menu">
+				<b>CONFIGURACIONES</b>
+			</div>
+			<div onclick="configuracion(1)" class="opt"><B>Agregar Usuario</B></div>
+			<div onclick="configuracion(2)" class="opt"><B>Cambiar Contraseña</B></div>
+			<div onclick="configuracion(3)" class="opt"><B>Eliminar Usuario</B></div>
+			<div onclick="configuracion(4)" class="opt"><B>Finalizar Sesión</B></div>
+		</div>
+		<div id="titulo_ventana2" class="titulo_ventana">
+			Agregar Usuario
+		</div>
+		<div id="usuarios" class="planilla">
 
-		<li><a href="#" style="color:#040404;" onclick="mostrar()"><B>Agregar Usuario</B></a></li>
-		<li><a href="#" style="color:#040404;" onclick="mostrar2()"><B>Cambiar Contraseña</B></a></li>
-		<li><a href="#" style="color:#040404;" onclick="Eli()"><B>Eliminar Usuario</B></a></li>
-		<li><a href="cerrarsesion.php" style="color:#FF0000;"><B>Finalizar Sesión</B></a></li>
-<div id="Usuario" style="display:none;">
+<div id="Usuario" class="config">
 	<h3>Usuario</h3>
 	<input type="text" id="usua" name="" value="" class="caja-texto">
   <br>
@@ -440,7 +457,9 @@ Registro vales
 	<br><br>
 	<input type="button" id="agregarusuario" class="boton-tab3" name="" value="Agregar Usuario">
 </div>
-<div id="Contra" style="display:none;">
+		</div>
+		<div id="pass" class="planilla visible">
+<div id="Contra" class="config">
 	<h3>Usuario</h3>
 <div class="usu">
      Elige un Usuario
@@ -452,7 +471,9 @@ Registro vales
 	<br><br>
 	<input type="button" id="cambiarcontra" name="" class="boton-tab3" value="Cambiar Contraseña">
 </div>
-<div id="Eliminar" style="display:none;">
+		</div>
+		<div id="eliminar_usuario" class="planilla visible">
+<div id="Eliminar" class="config">
 	<h3>Usuario</h3>
 <div class="Eusu">
      Elige un Usuario
@@ -462,7 +483,7 @@ Registro vales
 	<input type="button" id="eliminar" name="" class="boton-tab3"value="Eliminar Usuario">
 
 </div>
-
+		</div>
 	</div>
 
 
@@ -476,24 +497,13 @@ Registro vales
 	</div>
 </div>
 </div>
-<div id="dialog" title="Eliminar ingresos a planta!">
+<div id="dialog" title="">
 	<p id="mensaje1"></p>
-</div>
-<div id="dialog2" title="Eliminar ingresos a planta!">
-	<p id="mensaje12"></p>
-</div>
-<div id="dialog3" title="Eliminar ingresos a planta!">
-	<p id="mensaje123"></p>
 </div>
 <div id="dialog_single_button" title="Mensaje!">
 	<p id="mensaje2"></p>
 </div>
-<div id="dialog_single_button2" title="Mensaje!">
-	<p id="mensaje22"></p>
-</div>
-<div id="dialog_single_button3" title="Mensaje!">
-	<p id="mensaje223"></p>
-</div>
+
 <script type="text/javascript" src="js/elementos.js"></script>
 <script type="text/javascript" src="js/funciones.js"></script>
 <script type="text/javascript" src="js/IngresoCuarto.js"></script>
@@ -503,6 +513,7 @@ Registro vales
 <script type="text/javascript" src="js/decomisos.js"></script>
 <script type="text/javascript" src="js/planilla.js"></script>
 <script type="text/javascript" src="js/reportes.js"></script>
+<script type="text/javascript" src="js/configuraciones.js"></script>
 <script type="text/javascript" src="js/Usuarios.js"></script>
 </body>
 </html>

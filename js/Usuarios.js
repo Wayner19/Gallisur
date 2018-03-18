@@ -1,25 +1,5 @@
 cargar_tabla(null);
 
-
-
-
-function mostrar(){
-document.getElementById('Usuario').style.display = 'block';
-document.getElementById('Contra').style.display = 'none';
-document.getElementById('Eliminar').style.display = 'none';
-}
-function mostrar2(){
-  cargar_user();
-document.getElementById('Contra').style.display = 'block';
-document.getElementById('Usuario').style.display = 'none';
-document.getElementById('Eliminar').style.display = 'none';
-}
-function Eli(){
-cargar_user2();
-document.getElementById('Eliminar').style.display = 'block';
-document.getElementById('Contra').style.display = 'none';
-document.getElementById('Usuario').style.display = 'none';
-}
 function ja(){
 alert( "Handler for .change() called." );
 }
