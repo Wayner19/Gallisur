@@ -116,6 +116,9 @@ j$123( "#datepicker_tab5" ).datepicker({
 j$123( "#datepicker_tab6" ).datepicker({
 	inline: true
 });
+j$123( "#datepicker_tab7" ).datepicker({
+	inline: true
+});
 j$123( "#datepicker4" ).datepicker();
 j$123( "#slider" ).slider({
 	range: true,
@@ -128,8 +131,6 @@ j$123( "#spinner" ).spinner();
 j$123( "#menu" ).menu();
 j$123( "#tooltip" ).tooltip();
 j$123( "#selectmenu" ).selectmenu();
-j$123( "#Usu" ).selectmenu();
-j$123( "#EUsu" ).selectmenu();
 j$123( "#Privilegios" ).selectmenu();
 j$123( "#selectmenu_tab2" ).selectmenu();
 j$123( "#selectmenu_tab3" ).selectmenu();
@@ -174,3 +175,4 @@ j$123( "#dialog-link, #icons li" ).hover(
 	j$123( "#btn_agregar_pedido2" ).button();
 	j$123( "#btn_eliminar_decomisos" ).button();
 	j$123( "#btn_agregar_decomiso" ).button();
+	j$123( "#btn_agregar_funcionario" ).button();

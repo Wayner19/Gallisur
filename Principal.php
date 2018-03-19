@@ -375,6 +375,34 @@ if (!empty($_SESSION['usuario'])){
 			<div class="titulo_ventana2">
 				Registro funcionario
 			</div>
+			<div class="arriba_tab4">
+				<div class="espacio">
+					<h3>Fecha de ingreso</h3>
+					<div id="datepicker_tab7"></div>
+				</div>
+				<div class="espacio">
+						<h3>Nombre:</h3>
+						<input type="text" id="txt_nombre_tab7" name="" value="" class="caja-texto7">
+					<div class="datos">
+						<div class="">
+							<h3>Cédula:</h3>
+							<input type="text" id="txt_cedula_tab7" name="" value="" class="caja-texto8">
+						</div>
+					<div class="">
+						<h3>Teléfono:</h3>
+						<input type="text" id="txt_telefono_tab7" name="" value="" class="caja-texto8">
+					</div>
+					</div>
+					<h3>Cuenta bancaria:</h3>
+					<input type="text" id="txt_cuenta_tab7" name="" value="" class="caja-texto">
+				</div>
+				<div class="">
+					<h3>Foto</h3>
+					<img id="imgSalida" src="images/user.jpg" alt="">
+			   	<input name="file-input" id="file-input" type="file" />
+				</div>
+			</div>
+				<button id='btn_agregar_funcionario' class='boton-tab7'>Agregar funcionario</button>
 		</div>
 		<div id="pagos" class="planilla2 visible">
 			<div class="titulo_ventana2">
@@ -463,7 +491,10 @@ if (!empty($_SESSION['usuario'])){
 	<h3>Usuario</h3>
 <div class="usu">
      Elige un Usuario
-     <select id="Usu"></select>
+		 <br><br>
+		 <div id="user" class="">
+
+		 </div>
 </div>
   <br>
 	<h3>Contraseña</h3>
@@ -474,10 +505,13 @@ if (!empty($_SESSION['usuario'])){
 		</div>
 		<div id="eliminar_usuario" class="planilla visible">
 <div id="Eliminar" class="config">
-	<h3>Usuario</h3>
+
 <div class="Eusu">
-     Elige un Usuario
-     <select id="EUsu"></select>
+    <h3>Elige un Usuario</h3>
+<br>
+		 <div id="user2" class="">
+
+		 </div>
 </div>
   <br><br>
 	<input type="button" id="eliminar" name="" class="boton-tab3"value="Eliminar Usuario">

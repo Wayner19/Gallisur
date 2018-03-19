@@ -72,11 +72,13 @@ function Limpiar(){
       dataType: "json",
         url: "CargarUser.php"
       }).done(function( data, textStatus, jqXHR ) {
-        var opciones = "<option value='' selected='selected'>Seleccione...</option>";
+        var opciones = "<select id='Usu'><option value='' selected='selected'>Seleccione...</option>";
         for(i = 0; i < data.length; i++){
           opciones += "<option>"+ data[i].user +"</option>";
         }
-          j$123( "#Usu" ).html(opciones);
+        opciones += "</select>";
+          j$123( "#user" ).html(opciones);
+          j$123( "#Usu" ).selectmenu();
       }).fail(function( jqXHR, textStatus, errorThrown ) {
         alert(textStatus + "!!");
       });
@@ -88,12 +90,13 @@ function Limpiar(){
         dataType: "json",
           url: "CargarUser2.php"
         }).done(function( data, textStatus, jqXHR ) {
-          var opciones = "<option value='' selected='selected'>Seleccione</option>";
+          var opciones = "<select id='EUsu'><option value='' selected='selected'>Seleccione</option>";
           for(i = 0; i < data.length; i++){
             opciones += "<option>"+ data[i].user +"</option>";
           }
-            j$123( "#EUsu" ).html(opciones);
-
+          opciones += "</select>";
+            j$123( "#user2" ).html(opciones);
+           j$123( "#EUsu" ).selectmenu();
         }).fail(function( jqXHR, textStatus, errorThrown ) {
           alert(textStatus + "!!");
         });
