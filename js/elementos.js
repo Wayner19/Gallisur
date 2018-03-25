@@ -42,6 +42,8 @@ j$123( "#controlgroup5" ).controlgroup();
 j$123( "#controlgroup1_8" ).controlgroup();
 j$123( "#controlgroup2_8" ).controlgroup();
 j$123( "#controlgroup3_8" ).controlgroup();
+j$123( "#controlgroup4_8" ).controlgroup();
+j$123( "#controlgroup5_8" ).controlgroup();
 j$123( "#tabs" ).tabs();
 
 function accion_dialogo(opt, parametro, titulo){
@@ -119,7 +121,9 @@ j$123( "#datepicker_tab6" ).datepicker({
 j$123( "#datepicker_tab7" ).datepicker({
 	inline: true
 });
-j$123( "#datepicker4" ).datepicker();
+j$123( "#datepicker_2_tab7" ).datepicker();
+j$123( "#datepicker_3_tab7" ).datepicker();
+j$123( "#datepicker_4_tab7" ).datepicker();
 j$123( "#slider" ).slider({
 	range: true,
 	values: [ 17, 67 ]
@@ -136,6 +140,22 @@ j$123( "#selectmenu_tab2" ).selectmenu();
 j$123( "#selectmenu_tab3" ).selectmenu();
 j$123( "#selectmenu_tab4" ).selectmenu();
 j$123( "#selectmenu_tab5" ).selectmenu();
+j$123( "#selectmenu_1_tab7" ).selectmenu();
+j$123( "#selectmenu_2_tab7" ).selectmenu();
+j$123( "#selectmenu_3_tab7" ).selectmenu();
+j$123( "#selectmenu_4_tab7" ).selectmenu();
+j$123( "#selectmenu_5_tab7" ).selectmenu();
+j$123( "#selectmenu_6_tab7" ).selectmenu();
+j$123( "#selectmenu_7_tab7" ).selectmenu();
+j$123( "#selectmenu_8_tab7" ).selectmenu();
+j$123( "#selectmenu_9_tab7" ).selectmenu();
+j$123( "#selectmenu_10_tab7" ).selectmenu();
+j$123( "#selectmenu_11_tab7" ).selectmenu();
+j$123( "#selectmenu_12_tab7" ).selectmenu();
+j$123( "#selectmenu_13_tab7" ).selectmenu();
+j$123( "#selectmenu_14_tab7" ).selectmenu();
+j$123( "#selectmenu_15_tab7" ).selectmenu();
+
 j$123( "#dialog-link, #icons li" ).hover(
 	function() {
 		j$123( this ).addClass( "ui-state-hover" );
@@ -176,3 +196,10 @@ j$123( "#dialog-link, #icons li" ).hover(
 	j$123( "#btn_eliminar_decomisos" ).button();
 	j$123( "#btn_agregar_decomiso" ).button();
 	j$123( "#btn_agregar_funcionario" ).button();
+	j$123( "#btn_modificar_funcionario" ).button();
+	j$123( "#btn_eliminar_funcionario" ).button();
+	j$123( "#btn_agregar_pago" ).button();
+	j$123( "#btn_agregar_vale" ).button();
+	j$123( "#btn_agregar_labor" ).button();
+	j$123( "#fecha_inicio1" ).datepicker();
+	j$123( "#fecha_final1" ).datepicker();

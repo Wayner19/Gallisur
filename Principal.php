@@ -368,6 +368,7 @@ if (!empty($_SESSION['usuario'])){
 				<b>PLANILLA</b>
 			</div>
 			<div onclick="planilla(1)" class="opt"><B>Registro funcionario</B></div>
+			<div onclick="planilla(4)" class="opt"><B>Registro labores</B></div>
 			<div onclick="planilla(2)" class="opt"><B>Registro pagos</B></div>
 			<div onclick="planilla(3)" class="opt"><B>Registro vales</B></div>
 		</div>
@@ -375,6 +376,18 @@ if (!empty($_SESSION['usuario'])){
 			<div class="titulo_ventana2">
 				Registro funcionario
 			</div>
+			<div class="trabajador">
+				<h3>Seleccione un trabajador: </h3>
+				<select id="selectmenu_1_tab7">
+				 <option selected="selected">Pedro Morales</option>
+				 <option>Alas</option>
+				 <option>Pechugas</option>
+				 <option>Patas</option>
+				 <option>Pescuezo</option>
+				 <option>Ante muslo</option>
+				</select>
+			</div>
+			<br>
 			<div class="arriba_tab4">
 				<div class="espacio">
 					<h3>Fecha de ingreso</h3>
@@ -402,16 +415,160 @@ if (!empty($_SESSION['usuario'])){
 			   	<input name="file-input" id="file-input" type="file" />
 				</div>
 			</div>
+			<div class="">
+				<button id='btn_eliminar_funcionario' class='boton-tab7'>Eliminar funcionario</button>
+				<button id='btn_modificar_funcionario' class='boton-tab7'>Modificar funcionario</button>
 				<button id='btn_agregar_funcionario' class='boton-tab7'>Agregar funcionario</button>
+			</div>
 		</div>
 		<div id="pagos" class="planilla2 visible">
 			<div class="titulo_ventana2">
 				Registro pagos
 			</div>
+			<div class="arriba_tab4">
+				<div class="espacio">
+					<h3>Fecha de pago</h3>
+					<div id="datepicker_2_tab7"></div>
+				</div>
+				<div class="espacio">
+					<div class="">
+						<h3>Trabajador: </h3>
+						<select id="selectmenu_2_tab7">
+						 <option selected="selected">Pedro Morales</option>
+						 <option>Alas</option>
+						 <option>Pechugas</option>
+						 <option>Patas</option>
+						 <option>Pescuezo</option>
+						 <option>Ante muslo</option>
+						</select>
+					</div>
+					<h3>Cantidad de aves procesadas:</h3>
+					<input type="text" id="txt_nombre_2_tab7" name="" value="" class="caja-texto7">
+					<h3>Costo por ave procesadas:</h3>
+					<input type="text" id="txt_nombre_3_tab7" name="" value="" class="caja-texto7">
+				</div>
+				<div class="espacio">
+					<h3>Total bruto:</h3>
+					<input type="text" id="txt_nombre_4_tab7" name="" value="" class="caja-texto7">
+					<h3>Vales:</h3>
+					<input type="text" id="txt_nombre_5_tab7" name="" value="" class="caja-texto7">
+					<h3>Total a cancelar:</h3>
+					<input type="text" id="txt_nombre_6_tab7" name="" value="" class="caja-texto7">
+				</div>
+				<div class="espacio">
+					<h3>Rebajar vales?</h3>
+					<div id="controlgroup4_8">
+					<label for="aplica">Aplicar</label>
+					<input type="radio" name="transmission" id="aplica">
+					<label for="no_aplica">No aplicar</label>
+					<input type="radio" name="transmission" id="no_aplica">
+				</div>
+				<h3>Monto por otras labores:</h3>
+				<input type="text" id="txt_nombre_8_tab7" name="" value="" class="caja-texto7">
+				<div class="boton_pagar">
+					<button id='btn_agregar_pago' class='boton-tab1'>Agregar pago</button>
+				</div>
+				</div>
+				<div class="espacio">
+					<div class="foto_pago">
+						<h3>Foto</h3>
+						<img id="imgSalida_pago" src="images/user.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_9"></div>
+			</div>
 		</div>
 		<div id="vales" class="planilla2 visible">
 			<div class="titulo_ventana2">
 				Registro vales
+			</div>
+			<div class="arriba_tab4">
+				<div class="espacio">
+					<h3>Fecha de vale</h3>
+					<div id="datepicker_3_tab7"></div>
+				</div>
+				<div class="espacio">
+					<div class="">
+						<h3>Trabajador: </h3>
+						<select id="selectmenu_3_tab7">
+						 <option selected="selected">Pedro Morales</option>
+						 <option>Alas</option>
+						 <option>Pechugas</option>
+						 <option>Patas</option>
+						 <option>Pescuezo</option>
+						 <option>Ante muslo</option>
+						</select>
+					</div>
+					<h3>Monto del vale:</h3>
+					<input type="text" id="txt_nombre_7_tab7" name="" value="" class="caja-texto7">
+				</div>
+				<div class="espacio">
+				<div class="boton_pagar">
+					<button id='btn_agregar_vale' class='boton-tab1'>Agregar vale</button>
+				</div>
+				</div>
+				<div class="espacio">
+					<div class="foto_pago">
+						<h3>Foto</h3>
+						<img id="imgSalida_vale" src="images/user.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_10"></div>
+			</div>
+		</div>
+		<div id="labores" class="planilla2 visible">
+			<div class="titulo_ventana2">
+				Registro labores
+			</div>
+			<div class="arriba_tab4">
+				<div class="espacio">
+					<h3>Fecha de la labor</h3>
+					<div id="datepicker_4_tab7"></div>
+				</div>
+				<div class="espacio">
+					<div class="">
+						<h3>Trabajador: </h3>
+						<select id="selectmenu_4_tab7">
+						 <option selected="selected">Pedro Morales</option>
+						 <option>Alas</option>
+						 <option>Pechugas</option>
+						 <option>Patas</option>
+						 <option>Pescuezo</option>
+						 <option>Ante muslo</option>
+						</select>
+					</div>
+					<h3>Tipo de labor:</h3>
+					<div id="controlgroup5_8">
+					<label for="matanza">Matanza</label>
+					<input type="radio" name="transmission" id="matanza">
+					<label for="otras">Otra labor</label>
+					<input type="radio" name="transmission" id="otras">
+				</div>
+					<h3>Aves procesadas:</h3>
+					<input type="text" id="txt_nombre_10_tab7" name="" value="" class="caja-texto7">
+				</div>
+				<div class="espacio">
+					<h3>Detalle por otras labores:</h3>
+					<input type="text" id="txt_nombre_9_tab7" name="" value="" class="caja-texto7">
+					<h3>Monto por otras labores:</h3>
+					<input type="text" id="txt_nombre_11_tab7" name="" value="" class="caja-texto">
+				<div class="boton_pagar">
+					<button id='btn_agregar_labor' class='boton-tab1'>Agregar labor</button>
+				</div>
+				</div>
+				<div class="espacio">
+					<div class="foto_pago">
+						<h3>Foto</h3>
+						<img id="imgSalida_labor" src="images/user.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_11"></div>
 			</div>
 		</div>
 	</div>
@@ -433,25 +590,168 @@ if (!empty($_SESSION['usuario'])){
 			Ingresos a planta
 		</div>
 		<div id="ingresos" class="planilla">
-
+			<div class="arriba_reporte">
+				<div class="espacio">
+					<p>Fecha inicial: <input type="text" id="fecha_inicio1"></p>
+				</div>
+				<div class="espacio">
+					<p>Fecha final: <input type="text" id="fecha_final1"></p>
+				</div>
+				<div class="espacio">
+					<p>Tipo: <select id="selectmenu_5_tab7">
+				   <option selected="selected">Pollos</option>
+				   <option>Gallinas</option>
+				   <option>Gallos</option>
+			   </select></p>
+				</div>
+				<div class="espacio">
+					<p>Camión: <select id="selectmenu_6_tab7">
+				   <option selected="selected">Camión 1</option>
+				   <option>Camión 2</option>
+			   </select></p>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_12"></div>
+			</div>
 		</div>
 		<div id="cuarto" class="planilla visible">
-
+			<div class="arriba_reporte">
+				<div class="espacio">
+					<p>Fecha inicial: <input type="text" id="fecha_inicio2"></p>
+				</div>
+				<div class="espacio">
+					<p>Fecha final: <input type="text" id="fecha_final2"></p>
+				</div>
+				<div class="espacio">
+					<p>Tipo: <select id="selectmenu_7_tab7">
+					 <option selected="selected">Pollos</option>
+					 <option>Gallinas</option>
+					 <option>Gallos</option>
+				 </select></p>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_13"></div>
+			</div>
 		</div>
 		<div id="despacho" class="planilla visible">
-
+			<div class="arriba_reporte">
+				<div class="espacio">
+					<p>Fecha inicial: <input type="text" id="fecha_inicio3"></p>
+				</div>
+				<div class="espacio">
+					<p>Fecha final: <input type="text" id="fecha_final3"></p>
+				</div>
+				<div class="espacio">
+					<p>Tipo: <select id="selectmenu_8_tab7">
+					 <option selected="selected">Pollos</option>
+					 <option>Gallinas</option>
+					 <option>Gallos</option>
+				 </select></p>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_14"></div>
+			</div>
 		</div>
 		<div id="devoluciones" class="planilla visible">
-
+			<div class="arriba_reporte">
+				<div class="espacio">
+					<p>Fecha inicial: <input type="text" id="fecha_inicio4"></p>
+				</div>
+				<div class="espacio">
+					<p>Fecha final: <input type="text" id="fecha_final4"></p>
+				</div>
+				<div class="espacio">
+					<p>Tipo: <select id="selectmenu_9_tab7">
+					 <option selected="selected">Pollos</option>
+					 <option>Gallinas</option>
+					 <option>Gallos</option>
+				 </select></p>
+				</div>
+				<div class="espacio">
+					<p>Camión: <select id="selectmenu_10_tab7">
+					 <option selected="selected">Camión 1</option>
+					 <option>Camión 2</option>
+				 </select></p>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_15"></div>
+			</div>
 		</div>
 		<div id="pedidos" class="planilla visible">
-
+			<div class="arriba_reporte">
+				<div class="espacio">
+					<p>Fecha inicial: <input type="text" id="fecha_inicio5"></p>
+				</div>
+				<div class="espacio">
+					<p>Fecha final: <input type="text" id="fecha_final5"></p>
+				</div>
+				<div class="espacio">
+					<p>Tipo: <select id="selectmenu_11_tab7">
+					 <option selected="selected">Pollos</option>
+					 <option>Gallinas</option>
+					 <option>Gallos</option>
+				 </select></p>
+				</div>
+				<div class="espacio">
+					<p>Cliente: <select id="selectmenu_12_tab7">
+					 <option selected="selected">CNP</option>
+					 <option>Escuela</option>
+				 </select></p>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_16"></div>
+			</div>
 		</div>
 		<div id="decomisos" class="planilla visible">
-
+			<div class="arriba_reporte">
+				<div class="espacio">
+					<p>Fecha inicial: <input type="text" id="fecha_inicio6"></p>
+				</div>
+				<div class="espacio">
+					<p>Fecha final: <input type="text" id="fecha_final6"></p>
+				</div>
+				<div class="espacio">
+					<p>Tipo: <select id="selectmenu_13_tab7">
+					 <option selected="selected">Pollos</option>
+					 <option>Gallinas</option>
+					 <option>Gallos</option>
+				 </select></p>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_17"></div>
+			</div>
 		</div>
 		<div id="personal" class="planilla visible">
-
+			<div class="arriba_reporte">
+				<div class="espacio">
+					<p>Fecha inicial: <input type="text" id="fecha_inicio7"></p>
+				</div>
+				<div class="espacio">
+					<p>Fecha final: <input type="text" id="fecha_final7"></p>
+				</div>
+				<div class="espacio">
+					<p>Trabajador: <select id="selectmenu_14_tab7">
+					 <option selected="selected">Juan Morales</option>
+					 <option>Gallinas</option>
+					 <option>Gallos</option>
+				 </select></p>
+				</div>
+				<div class="espacio">
+					<p>Labor: <select id="selectmenu_15_tab7">
+					 <option selected="selected">Matanza</option>
+					 <option>Otras labores</option>
+				 </select></p>
+				</div>
+			</div>
+			<div class="abajo_tab3">
+				<div id="div_tabla_18"></div>
+			</div>
 		</div>
 	</div>
 	<!--- Configuracion ----------------------------->
@@ -483,14 +783,16 @@ if (!empty($_SESSION['usuario'])){
   <option value="colaborador">Colaborador</option>
   </select>
 	<br><br>
-	<input type="button" id="agregarusuario" class="boton-tab3" name="" value="Agregar Usuario">
+	<div class="boton_pagar">
+		<input type="button" id="agregarusuario" class="boton-tab3" name="" value="Agregar Usuario">
+	</div>
 </div>
 		</div>
 		<div id="pass" class="planilla visible">
 <div id="Contra" class="config">
 	<h3>Usuario</h3>
 <div class="usu">
-     Elige un Usuario
+     Elige un Usuario:
 		 <br><br>
 		 <div id="user" class="">
 
@@ -500,27 +802,28 @@ if (!empty($_SESSION['usuario'])){
 	<h3>Contraseña</h3>
 	<input type="text" id="contra2" name="" value="" class="caja-texto">
 	<br><br>
-	<input type="button" id="cambiarcontra" name="" class="boton-tab3" value="Cambiar Contraseña">
+	<div class="boton_pagar">
+		<input type="button" id="cambiarcontra" name="" class="boton-tab3" value="Cambiar Contraseña">
+	</div>
 </div>
 		</div>
 		<div id="eliminar_usuario" class="planilla visible">
 <div id="Eliminar" class="config">
 
 <div class="Eusu">
-    <h3>Elige un Usuario</h3>
+    <h3>Elige un Usuario:</h3>
 <br>
 		 <div id="user2" class="">
 
 		 </div>
 </div>
   <br><br>
-	<input type="button" id="eliminar" name="" class="boton-tab3"value="Eliminar Usuario">
-
+	<div class="boton_pagar">
+		<input type="button" id="eliminar" name="" class="boton-tab3"value="Eliminar Usuario">
+	</div>
 </div>
 		</div>
 	</div>
-
-
 </div>
 <!--- Mensaje ----------------------------->
 <div id="mensaje" class="men">

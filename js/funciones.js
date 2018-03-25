@@ -1,7 +1,5 @@
   cargar_tabla(null);
 
-
-
   j$123( "#btn_aceptar_ingreso" ).click(function(){
     if(j$123("#txt_origen").val() != ""){
       if(j$123("#txt_cantidad").val() != ""){
@@ -91,7 +89,7 @@
   				"<img src='images/f3.png' class='next'/>"+
   				"<img src='images/f4.png' class='last'/>"+
   				"<select class='pagesize'>"+
-  					"<option selected='selected'  value='10'>10</option>"+
+  					"<option selected='selected'  value='7'>7</option>"+
   					"<option value='20'>20</option>"+
   					"<option value='30'>30</option>"+
   					"<option  value='40'>40</option>"+
